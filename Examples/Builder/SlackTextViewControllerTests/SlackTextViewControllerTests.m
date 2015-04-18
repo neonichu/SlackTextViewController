@@ -6,8 +6,10 @@
 //  Copyright (c) 2015 Slack. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-#import <XCTest/XCTest.h>
+#import <Expecta/Expecta.h>
+#import <Expecta+Snapshots/EXPMatchers+FBSnapshotTest.h>
+#import <FBSnapshotTestCase/FBSnapshotTestCase.h>
+#import <Specta/Specta.h>
 #import <SlackTextViewController/SLKTextViewController.h>
 
 @interface SLKTextViewControllerTest : SLKTextViewController
@@ -16,38 +18,34 @@
 @implementation SLKTextViewControllerTest
 @end
 
-@interface SlackTextViewControllerTests : XCTestCase
-@end
+#pragma mark -
 
-@implementation SlackTextViewControllerTests
+SpecBegin(SLKTextViewController)
 
-- (void)setUp {
-    [super setUp];
-}
+describe(@"SLKTextViewController initialization", ^{
+    it(@"has to be subclassed", ^{
+        expect(^{
+            [SLKTextViewController new];
+        }).to.raiseAny();
+    });
 
-- (void)tearDown {
-    [super tearDown];
-}
+    it(@"can be initialized with a table view style", ^{
+        SLKTextViewControllerTest *controller = [[SLKTextViewControllerTest alloc] initWithTableViewStyle:UITableViewStylePlain];
+        expect(controller.tableView).toNot.beNil();
+    });
 
-- (void)testSubclassing {
-    XCTAssertThrows([SLKTextViewController new]);
-}
+    it(@"can be initialized with a collection view layout", ^{
+        UICollectionViewFlowLayout *layout = [UICollectionViewFlowLayout new];
+        SLKTextViewControllerTest *controller = [[SLKTextViewControllerTest alloc] initWithCollectionViewLayout:layout];
+        expect(controller.collectionView).toNot.beNil();
+    });
 
-- (void)testTableViewVersion {
-    SLKTextViewControllerTest *controller = [[SLKTextViewControllerTest alloc] initWithTableViewStyle:UITableViewStylePlain];
-    XCTAssertNotNil(controller.tableView, @"Cannot create SLKTextViewController instance");
-}
+    it(@"can be initialized with a scroll view", ^{
+        UIScrollView *scrollView = [UIScrollView new];
+        SLKTextViewControllerTest *controller = [[SLKTextViewControllerTest alloc] initWithScrollView:scrollView];
+        expect(controller.scrollView).toNot.beNil();
+    });
 
-- (void)testCollectionViewVersion {
-    UICollectionViewFlowLayout *layout = [UICollectionViewFlowLayout new];
-    SLKTextViewControllerTest *controller = [[SLKTextViewControllerTest alloc] initWithCollectionViewLayout:layout];
-    XCTAssertNotNil(controller.collectionView, @"Cannot create SLKTextViewController instance");
-}
+});
 
-- (void)testScrollViewVersion {
-    UIScrollView *scrollView = [UIScrollView new];
-    SLKTextViewControllerTest *controller = [[SLKTextViewControllerTest alloc] initWithScrollView:scrollView];
-    XCTAssertNotNil(controller.scrollView, @"Cannot create SLKTextViewController instance");
-}
-
-@end
+SpecEnd
