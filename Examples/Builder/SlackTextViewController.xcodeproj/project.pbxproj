@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F359EF3D142F9B536788C8C /* libPods-SlackTextViewControllerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D29387211F39FC2BEBEFAEC /* libPods-SlackTextViewControllerTests.a */; };
 		48C64A351ABA222C00021C91 /* SlackTextViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 48C64A211ABA222C00021C91 /* SlackTextViewController.h */; };
 		4F8B71541ABC9189006594B9 /* SLKTextView+SLKAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F8B71421ABC9189006594B9 /* SLKTextView+SLKAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4F8B71551ABC9189006594B9 /* SLKTextView+SLKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F8B71431ABC9189006594B9 /* SLKTextView+SLKAdditions.m */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1D29387211F39FC2BEBEFAEC /* libPods-SlackTextViewControllerTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SlackTextViewControllerTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		48C64A031ABA215600021C91 /* SlackTextViewController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SlackTextViewController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		48C64A1F1ABA221E00021C91 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = SlackTextViewController/Info.plist; sourceTree = SOURCE_ROOT; };
 		48C64A211ABA222C00021C91 /* SlackTextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SlackTextViewController.h; path = SlackTextViewController/SlackTextViewController.h; sourceTree = SOURCE_ROOT; };
@@ -65,6 +67,8 @@
 		4F8B716C1ABC94A2006594B9 /* SlackTextViewControllerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SlackTextViewControllerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F8B716F1ABC94A2006594B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4F8B71701ABC94A2006594B9 /* SlackTextViewControllerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SlackTextViewControllerTests.m; sourceTree = "<group>"; };
+		750D3894E66BB77E7ECE242F /* Pods-SlackTextViewControllerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SlackTextViewControllerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SlackTextViewControllerTests/Pods-SlackTextViewControllerTests.release.xcconfig"; sourceTree = "<group>"; };
+		7741EB393C88F4B95B9DE4B1 /* Pods-SlackTextViewControllerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SlackTextViewControllerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SlackTextViewControllerTests/Pods-SlackTextViewControllerTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,18 +85,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F8B71721ABC94A2006594B9 /* SlackTextViewController.framework in Frameworks */,
+				0F359EF3D142F9B536788C8C /* libPods-SlackTextViewControllerTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0EF6511F62725322E2238E63 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7741EB393C88F4B95B9DE4B1 /* Pods-SlackTextViewControllerTests.debug.xcconfig */,
+				750D3894E66BB77E7ECE242F /* Pods-SlackTextViewControllerTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		48C649F91ABA215600021C91 = {
 			isa = PBXGroup;
 			children = (
 				48C64A051ABA215600021C91 /* SlackTextViewController */,
 				4F8B716D1ABC94A2006594B9 /* SlackTextViewControllerTests */,
 				4F8B71671ABC9416006594B9 /* Frameworks */,
+				0EF6511F62725322E2238E63 /* Pods */,
 				48C64A041ABA215600021C91 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -169,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				4F8B71651ABC9404006594B9 /* UIKit.framework */,
+				1D29387211F39FC2BEBEFAEC /* libPods-SlackTextViewControllerTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -235,9 +251,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4F8B71751ABC94A2006594B9 /* Build configuration list for PBXNativeTarget "SlackTextViewControllerTests" */;
 			buildPhases = (
+				EFE198A64819940D8AE63AFE /* Check Pods Manifest.lock */,
 				4F8B71681ABC94A2006594B9 /* Sources */,
 				4F8B71691ABC94A2006594B9 /* Frameworks */,
 				4F8B716A1ABC94A2006594B9 /* Resources */,
+				BE00C7C837D1D1B732998B3E /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -300,6 +318,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		BE00C7C837D1D1B732998B3E /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SlackTextViewControllerTests/Pods-SlackTextViewControllerTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EFE198A64819940D8AE63AFE /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		48C649FE1ABA215600021C91 /* Sources */ = {
@@ -456,6 +507,7 @@
 		};
 		4F8B71761ABC94A2006594B9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7741EB393C88F4B95B9DE4B1 /* Pods-SlackTextViewControllerTests.debug.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -474,6 +526,7 @@
 		};
 		4F8B71771ABC94A2006594B9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 750D3894E66BB77E7ECE242F /* Pods-SlackTextViewControllerTests.release.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
